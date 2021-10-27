@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {defaultProps, propTypes} from '../components/DashLottieLoading.react';
+import Lottie from 'react-lottie-player'
 
 /**
  * ExampleComponent is an example component.
@@ -14,7 +15,7 @@ export default class DashLottieLoading extends Component {
         const {id, label, setProps, value} = this.props;
 
         return (
-            <div id={id}>
+            <h2 id={id}>
                 ExampleComponent: {label}&nbsp;
                 <input
                     value={value}
@@ -31,7 +32,13 @@ export default class DashLottieLoading extends Component {
                         e => setProps({ value: e.target.value })
                     }
                 />
-            </div>
+                <Lottie
+                  loop
+                  path="https://assets10.lottiefiles.com/private_files/lf30_ay0mbga2.json"
+                  play
+                  style={{ width: 150, height: 150 }}
+                />
+            </h2>
         );
     }
 }
