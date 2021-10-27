@@ -1,0 +1,27 @@
+.dashLottieLoading_js_metadata <- function() {
+deps_metadata <- list(`dash_lottie_loading` = structure(list(name = "dash_lottie_loading",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'async-DashLottieLoading.js',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashLottieLoading",
+all_files = FALSE, async = TRUE), class = "html_dependency"),
+`dash_lottie_loading` = structure(list(name = "dash_lottie_loading",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'async-DashLottieLoading.js.map',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashLottieLoading",
+all_files = FALSE, dynamic = TRUE), class = "html_dependency"),
+`dash_lottie_loading` = structure(list(name = "dash_lottie_loading",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'dash_lottie_loading.min.js',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashLottieLoading",
+all_files = FALSE), class = "html_dependency"),
+`dash_lottie_loading` = structure(list(name = "dash_lottie_loading",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'dash_lottie_loading.min.js.map',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashLottieLoading",
+all_files = FALSE, dynamic = TRUE), class = "html_dependency"))
+return(deps_metadata)
+}
