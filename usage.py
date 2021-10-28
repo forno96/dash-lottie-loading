@@ -7,17 +7,10 @@ app = dash.Dash(__name__)
 
 app.layout = html.Div([
     dash_lottie_loading.DashLottieLoading(
-        id='input',
-        value='my-value',
-        label='my-label'
+        path="https://assets10.lottiefiles.com/private_files/lf30_ay0mbga2.json"
     ),
     html.Div(id='output')
 ])
-
-
-@app.callback(Output('output', 'children'), [Input('input', 'value')])
-def display_output(value):
-    return 'You have entered {}'.format(value)
 
 
 if __name__ == '__main__':

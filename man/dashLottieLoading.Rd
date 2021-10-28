@@ -10,15 +10,17 @@ ExampleComponent is an example component. It takes a property, `label`, and disp
 }
 
 \usage{
-dashLottieLoading(id=NULL, label=NULL, value=NULL)
+dashLottieLoading(id=NULL, height=NULL, path=NULL, width=NULL)
 }
 
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
-\item{label}{Character. A label that will be printed when this component is rendered.}
+\item{height}{Character. The height of the lottie when this component is rendered.}
 
-\item{value}{Character. The value displayed in the input.}
+\item{path}{Character. The path of the lottie to show when this component is rendered.}
+
+\item{width}{Character. The width of the lottie when this component is rendered.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

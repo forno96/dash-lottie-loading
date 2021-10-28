@@ -28,14 +28,10 @@ DashLottieLoading.propTypes = {
     id: PropTypes.string,
 
     /**
-     * A label that will be printed when this component is rendered.
+     * The path of the lottie to show when this component is rendered.
      */
-    label: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
 
-    /**
-     * The value displayed in the input.
-     */
-    value: PropTypes.string,
 
     /**
      * Dash-assigned callback that should be called to report property changes

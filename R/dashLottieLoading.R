@@ -1,8 +1,8 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-dashLottieLoading <- function(id=NULL, label=NULL, value=NULL) {
+dashLottieLoading <- function(id=NULL, height=NULL, path=NULL, width=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, height=height, path=path, width=width)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -10,7 +10,7 @@ dashLottieLoading <- function(id=NULL, label=NULL, value=NULL) {
         props = props,
         type = 'DashLottieLoading',
         namespace = 'dash_lottie_loading',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'height', 'path', 'width'),
         package = 'dashLottieLoading'
         )
 

@@ -11,19 +11,26 @@
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
       },
-      "label": {
+      "path": {
         "type": {
           "name": "string"
         },
         "required": true,
-        "description": "A label that will be printed when this component is rendered."
+        "description": "The path of the lottie to show when this component is rendered."
       },
-      "value": {
+      "width": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "The value displayed in the input."
+        "description": "The width of the lottie when this component is rendered."
+      },
+      "height": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The height of the lottie when this component is rendered."
       },
       "setProps": {
         "type": {
