@@ -13,24 +13,50 @@ which is editable by the user.
 
 Keyword arguments:
 
+- children (list of a list of or a singular dash component, string or numbers | a list of or a singular dash component, string or number; optional):
+    Array that holds components to render.
+
 - id (string; optional):
     The ID used to identify this component in Dash callbacks.
 
-- height (string; optional):
-    The height of the lottie when this component is rendered.
+- className (string; optional):
+    Additional CSS class for the spinner root DOM node.
+
+- loading_state (dict; optional):
+    Object that holds the loading state object coming from
+    dash-renderer.
+
+    `loading_state` is a dict with keys:
+
+    - component_name (string; optional):
+        Holds the name of the component that is loading.
+
+    - is_loading (boolean; optional):
+        Determines if the component is loading or not.
+
+    - prop_name (string; optional):
+        Holds which property is loading.
+
+- parent_className (string; optional):
+    Additional CSS class for the outermost dcc.Loading parent div DOM
+    node.
+
+- parent_style (dict; optional):
+    Additional CSS styling for the outermost dcc.Loading parent div
+    DOM node.
 
 - path (string; required):
     The path of the lottie to show when this component is rendered.
 
-- width (string; optional):
-    The width of the lottie when this component is rendered."""
+- style (dict; optional):
+    Additional CSS styling for the spinner root DOM node."""
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, path=Component.REQUIRED, width=Component.UNDEFINED, height=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'height', 'path', 'width']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, parent_className=Component.UNDEFINED, style=Component.UNDEFINED, parent_style=Component.UNDEFINED, path=Component.REQUIRED, loading_state=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'loading_state', 'parent_className', 'parent_style', 'path', 'style']
         self._type = 'DashLottieLoading'
         self._namespace = 'dash_lottie_loading'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'height', 'path', 'width']
+        self.available_properties = ['children', 'id', 'className', 'loading_state', 'parent_className', 'parent_style', 'path', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
@@ -40,4 +66,4 @@ Keyword arguments:
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(DashLottieLoading, self).__init__(**args)
+        super(DashLottieLoading, self).__init__(children=children, **args)

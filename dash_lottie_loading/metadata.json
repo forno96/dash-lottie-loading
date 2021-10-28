@@ -11,6 +11,52 @@
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
       },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "arrayOf",
+              "value": {
+                "name": "node"
+              }
+            },
+            {
+              "name": "node"
+            }
+          ]
+        },
+        "required": false,
+        "description": "Array that holds components to render"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Additional CSS class for the spinner root DOM node"
+      },
+      "parent_className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Additional CSS class for the outermost dcc.Loading parent div DOM node"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Additional CSS styling for the spinner root DOM node"
+      },
+      "parent_style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Additional CSS styling for the outermost dcc.Loading parent div DOM node"
+      },
       "path": {
         "type": {
           "name": "string"
@@ -18,26 +64,29 @@
         "required": true,
         "description": "The path of the lottie to show when this component is rendered."
       },
-      "width": {
+      "loading_state": {
         "type": {
-          "name": "string"
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
         },
         "required": false,
-        "description": "The width of the lottie when this component is rendered."
-      },
-      "height": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The height of the lottie when this component is rendered."
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+        "description": "Object that holds the loading state object coming from dash-renderer"
       }
     }
   }

@@ -28,16 +28,37 @@ DashLottieLoading.propTypes = {
     id: PropTypes.string,
 
     /**
+     * Array that holds components to render
+     */
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+    ]),
+
+    /**
+     * Additional CSS class for the spinner root DOM node
+     */
+    className: PropTypes.string,
+
+    /**
+     *  Additional CSS class for the outermost dcc.Loading parent div DOM node
+     */
+    parent_className: PropTypes.string,
+
+    /**
+     * Additional CSS styling for the spinner root DOM node
+     */
+    style: PropTypes.object,
+
+    /**
+     * Additional CSS styling for the outermost dcc.Loading parent div DOM node
+     */
+    parent_style: PropTypes.object,
+
+    /**
      * The path of the lottie to show when this component is rendered.
      */
     path: PropTypes.string.isRequired,
-
-
-    /**
-     * Dash-assigned callback that should be called to report property changes
-     * to Dash, to make them available for callbacks.
-     */
-    setProps: PropTypes.func
 };
 
 
